@@ -46,6 +46,8 @@ Para comprovar a comunicação entre setores diferentes, foi realizado um teste 
 ### 2. Segurança de Borda (Firewall Interno com ACL)
 Para garantir que a rede de visitantes (VLAN 40) não tenha acesso aos dados sensíveis da empresa, foi implementada uma ACL Estendida no Roteador, aplicada no tráfego de entrada (`in`) da subinterface `g0/0/0.40`.
 
+![Ping Teste Smartphone -> Server](ping(acl).jpg)
+
 ```text
 ! Fragmento da configuração de segurança no Roteador
 access-list 100 deny ip 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255
